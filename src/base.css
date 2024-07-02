@@ -1,0 +1,83 @@
+:root {
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --surface1: #45475a;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--base);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  width: 80%;
+  height: 95%;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.board {
+  flex: 1;
+  border: 2px solid var(--surface1);
+}
+
+::-moz-color-swatch {
+  border-color: transparent;
+}
+
+.btn,
+.color-picker {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 5px;
+  border: 2px solid var(--surface1);
+  background-color: var(--mantle);
+  color: var(--text);
+  font-weight: 510;
+}
+
+.color-picker {
+  border: 2px solid var(--surface1);
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  flex-basis: calc(100%/10);
+  border: 1px solid var(--mantle);
+  background-color: var(--subtext1);
+}
+
+.modal {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .main{
+    height: 60%;
+  }
+}
