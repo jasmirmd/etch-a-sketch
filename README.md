@@ -3,7 +3,7 @@ Fourth project following the course of the odin project, an etch a sketch progra
 
 ## Live Demo:
 
-![demo](public/demo.png)
+![demo](public/demo0.png)
 
 [View Live Demo](https://jasmirmd.github.io/etch-a-sketch/)
 
