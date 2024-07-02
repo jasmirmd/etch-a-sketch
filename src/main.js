@@ -1,11 +1,9 @@
 const gridBtn = document.querySelector('.grids');
-const modeToggle = document.querySelector('.mode-toggle');
 const board = document.querySelector('.board');
 const colorPicker = document.querySelector('.color-picker');
 
 const initialGrids = 10;
 
-let drawState = true;
 let num = 9;
 
 const newElem = (tag, className) => {
@@ -66,23 +64,13 @@ const color = () => {
 
   grids.forEach((target) => {
     target.addEventListener('mouseover', () => {
-      if(drawState) {
-        target.style.backgroundColor = currentColor;
-        target.style.opacity = `0.${num}`;
-      } else {
-        target.style.backgroundColor = '#bac2de';
-      }
+      target.style.backgroundColor = currentColor;
+      target.style.opacity = `0.${num}`;
     });
   });
 
   if(num === 0) num = 9; 
 }
 
-const hanldleDraw = () => {
-  drawState = !drawState;
-  drawState ? modeToggle.textContent = 'ERASER' :  modeToggle.textContent = 'PAINT';
-};
-
 board.addEventListener('mouseover', color);
-modeToggle.addEventListener('click', hanldleDraw);
 gridBtn.addEventListener('click', appendGrids);
