@@ -6,6 +6,7 @@ const colorPicker = document.querySelector('.color-picker');
 const initialGrids = 10;
 
 let drawState = true;
+let num = 9;
 
 const newElem = (tag, className) => {
   const elem = document.createElement(tag);
@@ -61,13 +62,20 @@ const getColor = () => {
 const color = () => {
   const grids = board.querySelectorAll('div');
   const currentColor = getColor();
+  num--;
 
   grids.forEach((target) => {
     target.addEventListener('mouseover', () => {
-      drawState ? target.style.backgroundColor = currentColor :
-      target.style.backgroundColor = '#bac2de';
+      if(drawState) {
+        target.style.backgroundColor = currentColor;
+        target.style.opacity = `0.${num}`;
+      } else {
+        target.style.backgroundColor = '#bac2de';
+      }
     });
   });
+
+  if(num === 0) num = 9; 
 }
 
 const hanldleDraw = () => {
