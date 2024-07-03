@@ -1,5 +1,5 @@
 # Etch a Sketch
-Fourth project following the course of the odin project, an etch a sketch program.
+Fourth project following the course of [The Odin Project](https://www.theodinproject.com), an etch a sketch program.
 
 ## Live Demo:
 
