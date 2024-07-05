@@ -19,21 +19,21 @@ for(let i = 0; i < (initialGrids * initialGrids); i++) {
 }
 
 const getGridsValue = () => {
-  const grids = prompt('ingrese la cantidad de grillas');
+  const grids = prompt('Enter the number of grids');
 
   const parse = (option) => {
     const numberOfGrids = parseInt(option);
 
-    if(isNaN(numberOfGrids)) alert('ingrese un dato valido');
+    if(isNaN(numberOfGrids)) alert('Please enter valid information');
 
     if(numberOfGrids > 100 || numberOfGrids <= 0) {
-      alert('ingrese un numero dentro del rango');
+      alert('Enter a number within the range');
     } else {
       return numberOfGrids;
     }
   };
 
-  return grids.length === 0 ? alert('ingrese un dato valido') : parse(grids);
+  return grids.length === 0 ? alert('Please enter valid information') : parse(grids);
 };
 
 const cleanBoard = () => {
